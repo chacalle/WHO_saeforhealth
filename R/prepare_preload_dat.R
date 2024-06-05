@@ -1,16 +1,4 @@
 ###############################################################
-### load required libraries when package is loaded
-###############################################################
-
-.onAttach <- function(libname, pkgname) {
-  requireNamespace("magrittr", quietly = TRUE)
-}
-
-.onLoad <- function(libname, pkgname) {
-  requireNamespace("magrittr", quietly = TRUE)
-}
-
-###############################################################
 ### load DHS meta data
 ###############################################################
 
