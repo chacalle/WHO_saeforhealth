@@ -123,7 +123,7 @@ country.boundary.leaflet <-function(gadm.level,gadmData,use.basemap='OSM'){
 }
 
 
-#' @example
+# example
 
 if(FALSE){
   country_gadm <- readRDS('data/GADM_shp/BEN/BEN_GADM_display.rds')

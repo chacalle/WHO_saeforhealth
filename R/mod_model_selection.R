@@ -258,7 +258,7 @@ mod_model_selection_ui <- function(id){
 
 }
 
-#' model_selection Server Functions
+#' model selection Server Functions
 #'
 #' @noRd
 mod_model_selection_server <- function(id,CountryInfo,AnalysisInfo){

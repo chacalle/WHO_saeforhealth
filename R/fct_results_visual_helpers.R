@@ -1103,8 +1103,9 @@ if(FALSE){
 #' @param interactive whether to render interactive or static plot
 #'
 #' @return plotly or ggplot2 object
-
-
+#'
+#' @noRd
+#'
 scatter.plot <- function(res.obj.x,
                          res.obj.y ,
                          model.gadm.level,
@@ -1368,6 +1369,8 @@ tmp.interval <- surveyPrev::intervalPlot(admin = 2, compare = TRUE, model = list
 #' @param top.bottom.label c('Top','Bottom') how to name the extremes, top 10 bottom 10? need to change when close to 0 is bad for the indicator
 #'
 #' @return ggplot2 object
+#'
+#' @noRd
 
 posterior_ridge_plot <- function(res.obj,
                                  by.upper.adm.name=NA ,
