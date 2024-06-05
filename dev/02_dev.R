@@ -18,7 +18,7 @@
 ## install.packages('attachment') # if needed.
 attachment::att_amend_desc()
 usethis::use_package("pkgload")
-usethis::use_package("magrittr", type = "Depends")
+#usethis::use_package("magrittr", type = "Depends")
 
 #usethis::use_dev_package("richardli/surveyPrev")
 #usethis::use_dev_package("richardli/SUMMER")
