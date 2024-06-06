@@ -167,6 +167,11 @@ get_country_GADM <- function(country,resolution=1) {
       tmp.gadm <- sf::st_as_sf(tmp.gadm)
       tmp.gadm <- sf::st_set_crs(tmp.gadm, 4326)
 
+      n_region <- dim(tmp.gadm)[1]
+      #message(paste0('n region: ',n_region))
+      if(n_region >1000){break}
+
+
       if(levels==0){      gadm_list[['National']]  <- tmp.gadm
 }else{
       gadm_list[[paste0('Admin-',levels)]]  <- tmp.gadm}
@@ -193,15 +198,18 @@ get_country_shapefile <- function(country,source=NULL) {
 
   if(source =='WHO'){
 
-    if(!file.exists(paste0('data/WHO_shp/',country_iso3,'/',country_iso3,'_shp.rds'))){
+    WHO_shp_path <- system.file("WHO_shp", country_iso3, paste0(country_iso3,"_shp.rds"),
+                                   package = "SurveyPrevRshinyWHO")
 
+    if(WHO_shp_path==''){
       message('No WHO shapefile, use GADM instead.')
       source <- 'GADM'
+
     }else{
 
       message('Loading WHO shapefile.')
 
-      country_shp <- readRDS(file=paste0('data/WHO_shp/',country_iso3,'/',country_iso3,'_shp.rds'))
+      country_shp <- readRDS(file=WHO_shp_path)
       country_shp <- lapply(country_shp, function(x) {
         sf::st_set_crs(x, 4326)
       })
