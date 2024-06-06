@@ -25,11 +25,24 @@ graphical formats.
 
 ## Installation
 
-You can install the development version of SurveyPrevRshinyWHO from
-[GitHub](https://github.com/) with:
+Some non-CRAN dependencies can be installed using the following command.
+We strongly recommend installing the most recent version of SUMMER and
+surveyPrev package from Github.
 
 ``` r
 # install.packages("devtools")
+devtools::install_github("rspatial/geodata")
+devtools::install_github("richardli/SUMMER")
+devtools::install_github("richardli/surveyPrev")
+devtools::install_github("statnmap/HatchedPolygons")
+install.packages("INLA",repos=c(getOption("repos"),
+                        INLA="https://inla.r-inla-download.org/R/testing"),dep=TRUE)
+```
+
+You can then install the development version of SurveyPrevRshinyWHO
+with:
+
+``` r
 devtools::install_github("wu-thomas/WHO_saeforhealth")
 ```
 
