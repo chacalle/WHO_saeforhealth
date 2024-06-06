@@ -17,7 +17,7 @@
   #options(mypackage.options = new_opts)
 
   # Display a message indicating that the package has been loaded
-  message("surveyPrevRShiny loaded successfully.")
-  message("Please run 'surveyPrevRShiny::run_app()' to start the app.")
+  message("SurveyPrevRshinyWHO loaded successfully.")
+  message("Please run 'SurveyPrevRshinyWHO::run_app()' to start the app.")
 
 }
