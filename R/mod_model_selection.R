@@ -203,8 +203,9 @@ mod_model_selection_ui <- function(id){
                     }
                 });
                 </script>
-                ")),
-                          withMathJax(includeMarkdown("inst/app/www/method_direct.rmd"))
+                ")), withMathJax(includeMarkdown(system.file("app", 'www', paste0("method_direct.rmd"),
+                                           package = "SurveyPrevRshinyWHO")))
+                         # withMathJax(includeMarkdown("inst/app/www/method_direct.rmd"))
                  )),
 
                  # Second sub-tab for "Area-level Model"
@@ -224,7 +225,9 @@ mod_model_selection_ui <- function(id){
                 });
                 </script>
                 ")),
-                          withMathJax(includeMarkdown("inst/app/www/method_FH.rmd"))
+                          withMathJax(includeMarkdown(system.file("app", 'www', paste0("method_FH.rmd"),
+                                                 package = "SurveyPrevRshinyWHO")))
+                          #withMathJax(includeMarkdown("inst/app/www/method_FH.rmd"))
                  )),
 
                  # Third sub-tab for "Method 3"
@@ -243,8 +246,9 @@ mod_model_selection_ui <- function(id){
                     }
                 });
                 </script>
-                ")),
-                            withMathJax(includeMarkdown("inst/app/www/method_unit.rmd"))
+                ")),withMathJax(includeMarkdown(system.file("app", 'www', paste0("method_unit.rmd"),
+                                                                    package = "SurveyPrevRshinyWHO")))
+                            #withMathJax(includeMarkdown("inst/app/www/method_unit.rmd"))
                           ))
                )
     )
