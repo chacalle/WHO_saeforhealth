@@ -462,7 +462,7 @@ mod_country_specify_server <- function(id,CountryInfo,AnalysisInfo,parent_sessio
 
         ind_choice_vec(indicator_choices_vector)
 
-        shinyWidgets::updatePickerInput(inputId = "Svy_indicator", choices = sort(indicator_choices_vector,decreasing = F))
+        shinyWidgets::updatePickerInput(session,inputId = "Svy_indicator", choices = sort(indicator_choices_vector,decreasing = F))
 
       }
 
@@ -487,7 +487,7 @@ mod_country_specify_server <- function(id,CountryInfo,AnalysisInfo,parent_sessio
         indicator_choices_vector <- setNames(group_ind_list$ID, group_ind_list$Description)
         ind_choice_vec(indicator_choices_vector)
 
-        shinyWidgets::updatePickerInput(inputId = "Svy_indicator", choices = sort(indicator_choices_vector,decreasing = F))
+        shinyWidgets::updatePickerInput(session,inputId = "Svy_indicator", choices = sort(indicator_choices_vector,decreasing = F))
 
 
       } else {
