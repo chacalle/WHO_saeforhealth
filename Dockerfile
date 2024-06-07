@@ -35,5 +35,4 @@ RUN installGithub.r \
      wu-thomas/WHO_saeforhealth \
      && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
-EXPOSE 80
-CMD R -e "options('shiny.port'=80,shiny.host='0.0.0.0');library(SurveyPrevRshinyWHO);SurveyPrevRshinyWHO::run_app()"
+CMD R -e "options('shiny.port'=3838,shiny.host='0.0.0.0');library(SurveyPrevRshinyWHO);SurveyPrevRshinyWHO::run_app()"

@@ -15,10 +15,15 @@ Install Docker https://docs.docker.com/get-docker/
     - From sidebar, open 'Images' -> 'Local'. Should now have a row for 'Name'='chacalle333/surveyprevrshinywho' and 'Tag'='test'. 
     - Under actions click 'Run' (the play button).
     - Expand 'optional settings'.
-      - Under 'Ports': Fill 'Host port' with '80'.
+      - Under 'Ports': Fill 'Host port' with '3838'.
     - Click 'Run'
 
-4. Open the app in your web browser by navigating to 'localhost:80'.
+4. Open the app in your web browser by navigating to 'http://localhost:3838/'.
+
+5. When done, close the webpage and:
+    - From sidebar, open 'Containers'.
+    - Look for rows with 'Image'='chacalle333/surveyprevrshinywho' & Status = 'Running'.
+    - Under 'Actions' click 'Stop'
 
 ### command line (with internet access)
 
@@ -26,9 +31,14 @@ Install Docker https://docs.docker.com/get-docker/
 
 2. Download the image: `docker pull chacalle333/surveyprevrshinywho:test`
 
-3. Run a container with the downloaded image:　`docker run --rm -p 80:80 chacalle333/surveyprevrshinywho:test`
+3. Run a container with the downloaded image:　`docker run --rm -p 3838:3838 chacalle333/surveyprevrshinywho:test`
 
-4. Open the app in your web browser by navigating to 'localhost:80'.
+4. Open the app in your web browser by navigating to 'http://localhost:3838/'.
+
+5. When done, close the webpage and:
+    - From sidebar, open 'Containers'.
+    - Look for rows with 'Image'='chacalle333/surveyprevrshinywho' & Status = 'Running'.
+    - Under 'Actions' click 'Stop'
 
 ### command line (with file copy of image)
 
@@ -36,9 +46,14 @@ Install Docker https://docs.docker.com/get-docker/
 
 2. Obtain the docker image in tar format from another source. Load into docker with: `docker load --input file_path.tar`
 
-3. Run a container with the downloaded image:　`docker run --rm -p 80:80 chacalle333/surveyprevrshinywho:test`
+3. Run a container with the downloaded image:　`docker run --rm -p 3838:3838 chacalle333/surveyprevrshinywho:test`
 
-4. Open the app in your web browser by navigating to 'localhost:80'.
+4. Open the app in your web browser by navigating to 'http://localhost:3838/'.
+
+5. When done, close the webpage and:
+    - From sidebar, open 'Containers'.
+    - Look for rows with 'Image'='chacalle333/surveyprevrshinywho' & Status = 'Running'.
+    - Under 'Actions' click 'Stop'
 
 # Development instructions for building and maintaining the docker image
 
